@@ -28,7 +28,7 @@ if (TARGET_ARM64)
 endif()
 
 project(NexusUtils
-    VERSION 1.3.0
+    VERSION 1.3.1
     LANGUAGES CXX
 )
 
@@ -42,7 +42,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # -------------------------
 # Version appli (unique)
 # -------------------------
-set(APP_VERSION "1.3.0")
+set(APP_VERSION "1.3.1")
 set(APP_AUTHOR "Rona")
 set(APP_SUMMARY "Utilitaire de site web")
 string(REPLACE "." "," APP_VERSION_COMMA "${APP_VERSION}")
@@ -117,13 +117,11 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 # -------------------------
 # Ressources Qt
 # -------------------------
-if(WIN32)
-    qt_add_resources(${PROJECT_NAME} "app_resources"
-        PREFIX "/"
-        FILES
-            resources/Icone.png
-    )
-endif()
+qt_add_resources(${PROJECT_NAME} "app_resources"
+    PREFIX "/"
+    FILES
+        resources/Icone.png
+)
 
 # -------------------------
 # Ressources Windows (.rc)

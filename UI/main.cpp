@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
 
     QApplication a(argc, argv);
 	a.setApplicationName("NexusUtils");
-    a.setWindowIcon(QIcon("/icons/app_icon.png"));
+    a.setWindowIcon(QIcon(":/resources/Icone.png"));
 
 	OPENSSL_init_crypto(OPENSSL_INIT_LOAD_CONFIG, nullptr);
     RAND_poll();
@@ -127,7 +127,7 @@ int main(int argc, char* argv[])
 
     QSystemTrayIcon* tray = new QSystemTrayIcon(&a);
 
-    QIcon icon(":/Asset/Icone.png");
+    QIcon icon(":/resources/Icone.png");
     tray->setIcon(icon);
     tray->setToolTip("NexusUtils");
 
